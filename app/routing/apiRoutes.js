@@ -31,7 +31,6 @@ module.exports = function(app) {
            
 			
 		}
-
 		friends.push(userinput);
         res.json(match);
         
