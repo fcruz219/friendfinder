@@ -3,7 +3,9 @@ Are you alone?! Well don't worry we have a full list of terrible people you coul
 
 Answer a simple survey and you will be immediately matched with someone you can be friends with! Amazing, right?!
 
-Here's a link to our website [Heroku] (https://salty-shelf-30044.herokuapp.com/)
+Here's a link to our website.
+
+https://salty-shelf-30044.herokuapp.com/
 
 ## Splash page:
 
