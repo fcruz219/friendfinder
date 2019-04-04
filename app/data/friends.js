@@ -98,7 +98,7 @@ var friends = [
 	},
 	{
 		name: 'The Waitress',
-		photo: 'http://community.ew.com/wp-content/uploads/2015/01/gafsugw.jpg',
+		photo: 'https://static1.cbrimages.com/wp-content/uploads/spinoff/2015/09/always-sunny-waitress2.jpg',
 		scores: [
 			'5',
 			'4',

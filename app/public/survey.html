@@ -3,6 +3,7 @@
 <head>
     <title>Friend Finder</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <!-- Link to the jQuery Library -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Link to bootstrap -->
@@ -129,18 +130,26 @@
     </div>
 
     <!-- modal that displays match -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <h4>Closest Friend Match</h4>
-            <div class="divider"></div>
-            <h5 id="userMatch"></h5>
-            <img id="userMatchImage" class="materialboxed" width="650" src="">
+    <div id="modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <img src = "" id = "matchImage">
+              <p id="matchName"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
-        <div class="modal-footer">
-            <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
-        </div>
-    </div>
-
+      </div>
     <script type="text/javascript">
 
         // on click of the submit run this code
@@ -162,11 +171,18 @@
                 ]
             };
 
-            
+
             $.post("/api/friends", userInput,
                 function (data) {
                     if (data) {
                         alert("Finding a match!");
+                        console.log(data)
+
+                $("#matchImage").attr("src", data.photo);
+                $("#matchName").text(data.name);
+                // Pop open the modal dialog
+      			$('#modal').modal('toggle');
+
                     }
                 })
 
