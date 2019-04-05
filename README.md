@@ -15,3 +15,6 @@ https://salty-shelf-30044.herokuapp.com/
 
 ![friendfinder](https://user-images.githubusercontent.com/20998910/55581178-33a07300-56ea-11e9-8c8a-847d414948c2.gif)
 
+## Link to portfolio page
+
+(https://fcruz219.github.io/updated-portfolio/portfolio.html)
